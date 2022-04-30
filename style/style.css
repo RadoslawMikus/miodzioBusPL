@@ -1,0 +1,42 @@
+:root {
+  --mainColor: #1f1f1f;
+  --whiteColor: #fff;
+}
+
+body {
+  position: relative;
+  top: 56px;
+}
+
+.bg-mbus {
+  background-color: var(--mainColor);
+}
+
+nav img {
+  height: 150px;
+}
+
+.nav-item {
+  text-transform: uppercase;
+}
+
+.mainPhotoArea {
+  overflow: hidden;
+}
+
+.mainPhotoArea img {
+  height: calc(100vh - 56px);
+}
+
+@media (min-width: 992px) {
+  .mainPhotoArea img {
+    height: calc(100vh - 160px);
+  }
+
+  body {
+    top: 160px;
+  }
+  .nav-item {
+    padding: 0 20px;
+  }
+}
