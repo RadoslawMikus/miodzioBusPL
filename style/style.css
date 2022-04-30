@@ -35,6 +35,16 @@ nav img {
   line-height: 200%;
 }
 
+.certificateArea img {
+  width: 100%;
+  opacity: 0.6;
+}
+
+.certificateArea img:hover {
+  opacity: 1;
+  cursor: zoom-in;
+}
+
 @media (min-width: 992px) {
   .mainPhotoArea img {
     height: calc(100vh - 160px);
