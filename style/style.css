@@ -26,6 +26,9 @@ nav img {
 
 .mainPhotoArea img {
   height: calc(100vh - 56px);
+  width: 100%;
+  object-fit: cover;
+  object-position: 25%;
 }
 
 @media (min-width: 992px) {
