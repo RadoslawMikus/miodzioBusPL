@@ -45,6 +45,10 @@ nav img {
   cursor: zoom-in;
 }
 
+footer {
+  text-align: center;
+}
+
 @media (min-width: 992px) {
   .mainPhotoArea img {
     height: calc(100vh - 160px);
