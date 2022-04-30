@@ -28,7 +28,11 @@ nav img {
   height: calc(100vh - 56px);
   width: 100%;
   object-fit: cover;
-  object-position: 25%;
+  object-position: 22%;
+}
+
+.aboutArea p {
+  line-height: 200%;
 }
 
 @media (min-width: 992px) {
