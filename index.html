@@ -12,13 +12,17 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+
   </head>
   <body>
+
+
     <!-- --------------------------
     NAVIGATION
     -------------------------- -->
 
-    <nav id="home"
+    <nav  data-scroll-header
       class="navbar fixed-top text-white navbar-dark bg-mbus navbar-expand-lg py-lg-0"
     >
       <div class="container-fluid">
@@ -63,7 +67,7 @@
     MAIN PHOTO
     -------------------------- -->
 
-    <div class="mainPhotoArea container-fluid p-0">
+    <div id="home" class="mainPhotoArea container-fluid p-0">
       <img
         src="img/mainPhoto.jpg"
         alt="Na zdjęciu widać duży, żółty autobus, którego właścicielem jest firma Miodzio-Bus"
@@ -76,8 +80,8 @@
 
     <div id="about" class="aboutArea container-fluid p-5">
       <div class="row">
-        <div class="col-sm-9 offset-sm-1 col-lg-7 offset-lg-2">
-          <h1>O nas</h1>
+        <div class="offset-sm-1 col-sm-9 col-lg-7 offset-lg-2">
+          <h1>O mnie</h1>
           <p> Na imię mam Maciek,</p> 
 
             <p>Moją pasją od zawsze były pojazdy od tych małych
@@ -124,6 +128,10 @@
         <div class="col-10 col-md-6 col-lg-5 col-xl-4"><a href="img/certificates/big/certificate2.jpg"><img src="img/certificates/small/certificate2.jpg" alt="Certyfikat kompetencji zawodowych w drogowym transporcie osób"></a></div>
       </div>
     </div>
+
+    <!-- --------------------------
+    FOOTER
+    -------------------------- -->
 
     <footer><div class="container-fluid py-3">© 2021 Miodzio Bus</div></footer>
 

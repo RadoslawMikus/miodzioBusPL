@@ -3,9 +3,14 @@
   --whiteColor: #fff;
 }
 
+html {
+  scroll-behavior: auto !important;
+  scroll-padding-top: 160px;
+}
+
 body {
+  padding-top: 56px;
   position: relative;
-  top: 56px;
 }
 
 .bg-mbus {
@@ -55,7 +60,7 @@ footer {
   }
 
   body {
-    top: 160px;
+    padding-top: 160px;
   }
   .nav-item {
     padding: 0 20px;
