@@ -1,22 +1,22 @@
 // POLYFILL SCROLL
-// -----------------------------
+// ----------------------------------
 
 document.querySelector("html").style.scrollBehavior = "auto";
 const scroll = new SmoothScroll('.navbar a[href*="#"]', {
-  speed: 1000,
+  speed: 1200,
   speedAsDuration: true,
-  header: "[data-scroll-header]",
+  offset: 50,
 });
 
-// $(window).scroll(function(e) {
+// SCROLL TO HIDE LOGO
+// ----------------------------------
 
-//   var scroll = $(window).scrollTop();
-//   if (scroll >= 150) {
-//       $('.navbar').addClass("navbar-hide");
-//       $('.logo').addClass("logo-hide");
-//   } else {
-//       $('.navbar').removeClass("navbar-hide");
-//       $('.logo').removeClass("logo-hide");
-//   }
+const logo = document.querySelector(".logoImage");
 
-// });
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) {
+    logo.classList.add("hideLogo");
+  } else {
+    logo.classList.remove("hideLogo");
+  }
+});

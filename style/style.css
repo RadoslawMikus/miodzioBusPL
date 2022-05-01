@@ -1,10 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
 :root {
   --mainColor: #1f1f1f;
   --whiteColor: #fff;
+  --hoverColor: rgb(255, 197, 82);
 }
 
 html {
-  scroll-padding-top: 180px;
+  scroll-padding-top: 50px;
 }
 
 body {
@@ -18,10 +21,15 @@ body {
 
 nav img {
   height: 150px;
+  transition: height 0.2s, opacity 1s 0.3s;
 }
 
 .nav-item {
   text-transform: uppercase;
+}
+
+.nav-link:hover {
+  color: var(--hoverColor) !important;
 }
 
 .mainPhotoArea {
@@ -97,4 +105,25 @@ footer {
   .nav-item {
     padding: 0 20px;
   }
+}
+
+#about,
+#services,
+#contact {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+
+.hideLogo {
+  height: 56px;
+  opacity: 0;
+  transition: opacity 0.2s, height 0.5s 0.1s;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f8f8f8' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f8f8f8' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }

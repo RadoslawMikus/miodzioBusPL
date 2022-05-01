@@ -20,14 +20,19 @@
     -------------------------- -->
 
     <nav
+      id="home"
       data-scroll-header
-      class="navbar fixed-top text-white navbar-dark bg-mbus navbar-expand-lg py-lg-0"
+      class="navbar navFull fixed-top text-white navbar-dark bg-mbus navbar-expand-lg py-lg-0"
     >
       <div class="container-fluid">
-        <a class="navbar-brand" href="#home"
+        <a
+          class="navbar-brand"
+          href="#home"
+          data-bs-toggle="collapse"
+          data-bs-target=".navbar-collapse.show"
           ><span class="logoText d-lg-none">Miodzio-Bus</span
           ><img
-            class="d-none d-lg-block"
+            class="logoImage d-none d-lg-block"
             src="img/logoMiodzio.png"
             alt="Miś trzymający w łapce autobus okrążony napisem Miodzio-Bus, transport autokarowy"
         /></a>
@@ -45,16 +50,40 @@
         <div class="collapse navbar-collapse" id="navbarToggleMenu">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="#home">Strona główna</a>
+              <a
+                class="nav-link active"
+                href="#home"
+                data-bs-toggle="collapse"
+                data-bs-target=".navbar-collapse.show"
+                >Strona główna</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about">O nas</a>
+              <a
+                class="nav-link active"
+                href="#about"
+                data-bs-toggle="collapse"
+                data-bs-target=".navbar-collapse.show"
+                >O nas</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#services">Zakres usług</a>
+              <a
+                class="nav-link active"
+                href="#services"
+                data-bs-toggle="collapse"
+                data-bs-target=".navbar-collapse.show"
+                >Zakres usług</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Kontakt</a>
+              <a
+                class="nav-link active"
+                href="#contact"
+                data-bs-toggle="collapse"
+                data-bs-target=".navbar-collapse.show"
+                >Kontakt</a
+              >
             </li>
           </ul>
         </div>
@@ -65,7 +94,7 @@
     MAIN PHOTO
     -------------------------- -->
 
-    <div id="home" class="mainPhotoArea container-fluid p-0 mb-5">
+    <div class="mainPhotoArea container-fluid p-0 mb-5">
       <img
         src="img/mainPhoto.jpg"
         alt="Na zdjęciu widać duży, żółty autobus, którego właścicielem jest firma Miodzio-Bus"
@@ -130,7 +159,7 @@
     SERVICES
     -------------------------- -->
 
-    <div class="servicesArea container">
+    <div id="services" class="servicesArea container">
       <div class="row mb-4">
         <div class="col-10 offset-1 col-lg-8 offset-lg-2">
           <h1>Zakres usług</h1>
@@ -234,9 +263,9 @@
                     <h4>Wyjazdy integracyjne</h4>
                   </div>
                 </div>
-                <button
+                <a
                   class="carousel-control-prev"
-                  type="button"
+                  role="button"
                   data-bs-target="#carouselServices"
                   data-bs-slide="prev"
                 >
@@ -245,10 +274,10 @@
                     aria-hidden="true"
                   ></span>
                   <span class="visually-hidden">Poprzedni</span>
-                </button>
-                <button
+                </a>
+                <a
                   class="carousel-control-next"
-                  type="button"
+                  role="button"
                   data-bs-target="#carouselServices"
                   data-bs-slide="next"
                 >
@@ -257,7 +286,7 @@
                     aria-hidden="true"
                   ></span>
                   <span class="visually-hidden">Następny</span>
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -297,7 +326,7 @@
     CONTACT
     -------------------------- -->
 
-    <div class="contactArea container-fluid p-0">
+    <div id="contact" class="contactArea container-fluid p-0 mt-5">
       <div class="contactOverlay"></div>
       <div class="row d-flex justify-content-center px-5 m-0">
         <div
@@ -335,7 +364,7 @@
     FOOTER
     -------------------------- -->
 
-    <footer><div class="container-fluid py-3">© 2021 Miodzio Bus</div></footer>
+    <footer><div class="container-fluid py-3">© 2020 Miodzio Bus</div></footer>
 
     <!-- --------------------------
     SCRIPTS
