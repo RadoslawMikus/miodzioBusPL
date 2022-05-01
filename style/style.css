@@ -4,7 +4,7 @@
 }
 
 html {
-  scroll-padding-top: 160px;
+  scroll-padding-top: 180px;
 }
 
 body {
@@ -71,10 +71,19 @@ footer {
 
 .contactArea .row {
   position: relative;
+  padding: 100px 0;
 }
 
 .contactArea h2 {
   font-size: 24px;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption h5 {
+  position: relative;
 }
 
 @media (min-width: 992px) {
