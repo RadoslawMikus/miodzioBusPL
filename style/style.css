@@ -69,6 +69,11 @@ footer {
   color: var(--whiteColor);
 }
 
+.contactArea a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .contactOverlay {
   position: absolute;
   height: 100%;
