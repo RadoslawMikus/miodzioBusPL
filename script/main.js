@@ -5,7 +5,7 @@ document.querySelector("html").style.scrollBehavior = "auto";
 const scroll = new SmoothScroll('.navbar a[href*="#"]', {
   speed: 1200,
   speedAsDuration: true,
-  offset: 50,
+  offset: 40,
 });
 
 // SCROLL TO HIDE LOGO

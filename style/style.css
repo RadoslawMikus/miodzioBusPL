@@ -1,10 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-:root {
-  --mainColor: #1f1f1f;
-  --whiteColor: #fff;
-  --hoverColor: rgb(255, 197, 82);
-}
-
 html {
   scroll-padding-top: 50px;
 }
@@ -15,7 +8,14 @@ body {
 }
 
 .bg-mbus {
-  background-color: var(--mainColor);
+  background-color: #1f1f1f;
+}
+
+#about,
+#services,
+#contact {
+  padding-top: 50px;
+  margin-top: -50px;
 }
 
 nav img {
@@ -28,25 +28,31 @@ nav img {
 }
 
 .nav-link:hover {
-  color: var(--hoverColor) !important;
+  color: rgb(255, 197, 82) !important;
 }
 
-.mainPhotoArea {
+.hideLogo {
+  height: 56px;
+  opacity: 0;
+  transition: opacity 0.2s, height 0.6s 0.1s;
+}
+
+.headerArea {
   overflow: hidden;
   position: relative;
 }
-.mainPhotoArea::after {
-  content: "";
+
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 100;
 }
 
-.mainPhoto {
+.header {
   height: calc(100vh - 56px);
   width: 100%;
   -o-object-fit: cover;
@@ -56,7 +62,7 @@ nav img {
 }
 
 .headerLogo {
-  width: 70vmin;
+  width: 50vmin;
   position: absolute;
   top: 40%;
   left: 50%;
@@ -65,22 +71,44 @@ nav img {
   opacity: 0.9;
 }
 
+.aboutArea h1,
+.servicesArea h1 {
+  margin-bottom: 30px;
+}
+
 .aboutArea p {
   line-height: 200%;
+}
+.aboutArea a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.aboutArea a:hover {
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .certificateArea img {
   width: 100%;
   opacity: 0.6;
 }
-
-.certificateArea img:hover {
+.certificateArea img::hover {
   opacity: 1;
   cursor: zoom-in;
 }
 
-footer {
-  text-align: center;
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.carousel-caption h5 {
+  position: relative;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f8f8f8' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f8f8f8' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
 
 .contactArea {
@@ -88,12 +116,21 @@ footer {
   background-size: cover;
   background-position: center;
   position: relative;
-  color: var(--whiteColor);
+  color: #fff;
 }
-
+.contactArea .row {
+  position: relative;
+  padding: 100px 0;
+}
+.contactArea h2 {
+  font-size: 24px;
+}
 .contactArea a {
   text-decoration: none;
   color: #fff;
+}
+.contactArea a:hover {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .contactOverlay {
@@ -104,25 +141,24 @@ footer {
   opacity: 0.9;
 }
 
-.contactArea .row {
-  position: relative;
-  padding: 100px 0;
+footer {
+  text-align: center;
 }
 
-.contactArea h2 {
-  font-size: 24px;
+@media (max-width: 500px) {
+  .headerLogo {
+    width: 70vmin;
+  }
 }
-
-.carousel-caption {
-  background-color: rgba(0, 0, 0, 0.5);
+@media (max-width: 600px) {
+  .carousel-item img {
+    height: 60vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
-
-.carousel-caption h5 {
-  position: relative;
-}
-
 @media (min-width: 992px) {
-  .mainPhotoArea img {
+  .headerArea img {
     height: calc(100vh - 160px);
   }
 
@@ -133,24 +169,4 @@ footer {
   .nav-item {
     padding: 0 20px;
   }
-}
-#about,
-#services,
-#contact {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-
-.hideLogo {
-  height: 56px;
-  opacity: 0;
-  transition: opacity 0.2s, height 0.6s 0.1s;
-}
-
-.carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f8f8f8' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
-}
-
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f8f8f8' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }

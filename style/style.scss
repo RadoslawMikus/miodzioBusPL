@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+// ---------------------
+// GENERAL
+// ---------------------
 
-:root {
-  --mainColor: #1f1f1f;
-  --whiteColor: #fff;
-  --hoverColor: rgb(255, 197, 82);
-}
+$mainColor: #1f1f1f;
+$whiteColor: #fff;
+$hoverColor: rgb(255, 197, 82);
 
 html {
   scroll-padding-top: 50px;
@@ -16,8 +16,19 @@ body {
 }
 
 .bg-mbus {
-  background-color: var(--mainColor);
+  background-color: $mainColor;
 }
+
+#about,
+#services,
+#contact {
+  padding-top: 50px;
+  margin-top: -50px;
+}
+
+// ---------------------
+// NAVBAR
+// ---------------------
 
 nav img {
   height: 150px;
@@ -29,33 +40,45 @@ nav img {
 }
 
 .nav-link:hover {
-  color: var(--hoverColor) !important;
+  color: $hoverColor !important;
 }
 
-.mainPhotoArea {
+.hideLogo {
+  height: 56px;
+  opacity: 0;
+  transition: opacity 0.2s, height 0.6s 0.1s;
+}
+
+// ---------------------
+// HEADER
+// ---------------------
+
+.headerArea {
   overflow: hidden;
   position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 100;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+}
+
+.header {
+  height: calc(100vh - 56px);
+  width: 100%;
+  object: {
+    fit: cover;
+    position: 22%;
   }
 }
 
-.mainPhoto {
-  height: calc(100vh - 56px);
-  width: 100%;
-  object-fit: cover;
-  object-position: 22%;
-}
-
 .headerLogo {
-  width: 70vmin;
+  width: 50vmin;
   position: absolute;
   top: 40%;
   left: 50%;
@@ -64,35 +87,95 @@ nav img {
   opacity: 0.9;
 }
 
-.aboutArea p {
-  line-height: 200%;
+// ---------------------
+// ABOUT ME
+// ---------------------
+
+.aboutArea,
+.servicesArea {
+  h1 {
+    margin-bottom: 30px;
+  }
 }
+
+.aboutArea {
+  p {
+    line-height: 200%;
+  }
+
+  a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+}
+
+// ---------------------
+// CERTIFICATES
+// ---------------------
 
 .certificateArea img {
   width: 100%;
   opacity: 0.6;
+
+  &::hover {
+    opacity: 1;
+    cursor: zoom-in;
+  }
 }
 
-.certificateArea img:hover {
-  opacity: 1;
-  cursor: zoom-in;
+// ---------------------
+// SERVICES
+// ---------------------
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  h5 {
+    position: relative;
+  }
 }
 
-footer {
-  text-align: center;
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f8f8f8' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
 }
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f8f8f8' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+// ---------------------
+// CONTACT
+// ---------------------
 
 .contactArea {
-  background-image: url("../img/bgContact.jpg");
-  background-size: cover;
-  background-position: center;
+  background: {
+    image: url("../img/bgContact.jpg");
+    size: cover;
+    position: center;
+  }
   position: relative;
-  color: var(--whiteColor);
-}
+  color: $whiteColor;
 
-.contactArea a {
-  text-decoration: none;
-  color: #fff;
+  .row {
+    position: relative;
+    padding: 100px 0;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
 }
 
 .contactOverlay {
@@ -103,25 +186,32 @@ footer {
   opacity: 0.9;
 }
 
-.contactArea .row {
-  position: relative;
-  padding: 100px 0;
+// ---------------------
+// FOOTER
+// ---------------------
+
+footer {
+  text-align: center;
 }
 
-.contactArea h2 {
-  font-size: 24px;
+// ---------------------
+// MEDIA QUERIES
+// ---------------------
+
+@media (max-width: 500px) {
+  .headerLogo {
+    width: 70vmin;
+  }
 }
 
-.carousel-caption {
-  background-color: rgba(0, 0, 0, 0.5);
+@media (max-width: 600px) {
+  .carousel-item img {
+    height: 60vh;
+    object-fit: cover;
+  }
 }
-
-.carousel-caption h5 {
-  position: relative;
-}
-
 @media (min-width: 992px) {
-  .mainPhotoArea img {
+  .headerArea img {
     height: calc(100vh - 160px);
   }
 
@@ -131,25 +221,4 @@ footer {
   .nav-item {
     padding: 0 20px;
   }
-}
-
-#about,
-#services,
-#contact {
-  padding-top: 50px;
-  margin-top: -50px;
-}
-
-.hideLogo {
-  height: 56px;
-  opacity: 0;
-  transition: opacity 0.2s, height 0.6s 0.1s;
-}
-
-.carousel-control-prev-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f8f8f8' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
-}
-
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f8f8f8' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }

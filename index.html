@@ -12,6 +12,12 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
   </head>
   <body>
@@ -26,6 +32,7 @@
     >
       <div class="container-fluid">
         <a
+          tabindex="-1"
           class="navbar-brand"
           href="#home"
           data-bs-toggle="collapse"
@@ -93,14 +100,15 @@
     MAIN PHOTO
     -------------------------- -->
 
-    <div class="mainPhotoArea container-fluid p-0 mb-5">
+    <div class="headerArea container-fluid p-0 mb-5">
       <img
-        class="mainPhoto"
+        class="header"
         src="img/mainPhoto.jpg"
         alt="Na zdjęciu widać duży, żółty autobus, którego właścicielem jest firma Miodzio-Bus"
       />
+      <div class="overlay d-block d-lg-none"></div>
       <img
-        class="headerLogo d-block d-md-none"
+        class="headerLogo d-block d-lg-none"
         src="img/logoMiodzio.png"
         alt="Miś trzymający w łapce autobus okrążony napisem Miodzio-Bus, transport autokarowy"
       />
@@ -111,11 +119,11 @@
     -------------------------- -->
 
     <div id="about" class="aboutArea container">
-      <div class="row mb-3">
-        <div class="col-10 offset-1 offset-lg-2"><h1>O mnie</h1></div>
-      </div>
       <div class="row mb-5">
-        <div class="offset-1 col-10 col-md-10 col-lg-8 col-xl-6 offset-lg-2">
+        <div
+          class="px-4 px-sm-2 offset-md-1 col-md-10 offset-lg-2 col-lg-8 col-xl-6"
+        >
+          <h1>O mnie</h1>
           <p>Na imię mam Maciek,</p>
 
           <p>
@@ -155,7 +163,11 @@
             akurat prowadzę) na pewno oddzwonię.
           </p>
 
-          <p>Zapraszam do współpracy, <br />501 023 922</p>
+          <p>
+            Zapraszam do współpracy, <br /><a href="tel:501023922"
+              >501 023 922</a
+            >
+          </p>
         </div>
       </div>
     </div>
@@ -165,13 +177,9 @@
     -------------------------- -->
 
     <div id="services" class="servicesArea container">
-      <div class="row mb-4">
-        <div class="col-10 offset-1 col-lg-8 offset-lg-2">
-          <h1>Zakres usług</h1>
-        </div>
-      </div>
       <div class="row mb-5">
         <div class="col-12 col-lg-8 mx-auto p-1">
+          <h1 class="px-4 px-sm-0">Zakres usług</h1>
           <div
             id="carouselServices"
             class="carousel slide"
@@ -305,7 +313,7 @@
 
     <div class="certificateArea container">
       <div class="row mb-4">
-        <div class="col-10 offset-1 col-lg-8 offset-lg-2">
+        <div class="px-4 px-sm-2 col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
           <h1>Uprawnienia</h1>
         </div>
       </div>
@@ -351,7 +359,7 @@
         >
           <span
             ><h2>Numer telefonu</h2>
-            <p>501 023 922</p></span
+            <p><a href="tel:501023922">501 023 922</a></p></span
           >
         </div>
         <div
@@ -359,7 +367,9 @@
         >
           <span
             ><h2>Adres e-mail:</h2>
-            <p>kontakt@miodzio-bus.pl</p></span
+            <p>
+              <a href="mailto:kontakt@miodzio-bus.pl">kontakt@miodzio-bus.pl</a>
+            </p></span
           >
         </div>
       </div>
