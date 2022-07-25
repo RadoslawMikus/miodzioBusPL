@@ -33,7 +33,7 @@ nav img {
   text-transform: uppercase;
 }
 
-.nav-link:hover {
+.navbar-dark .navbar-nav .nav-link:hover {
   color: rgb(255, 197, 82);
 }
 
@@ -167,11 +167,9 @@ footer {
   .headerArea img {
     height: calc(100vh - 160px);
   }
-
   body {
     padding-top: 160px;
   }
-
   .nav-item {
     padding: 0 20px;
   }
