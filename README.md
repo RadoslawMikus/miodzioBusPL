@@ -3,7 +3,7 @@
 ### Repository: https://github.com/davidsmith931/miodzioBusPL
 ### Live Demo: https://davidsmith931.github.io/miodzioBusPL/
 
-_Simple SPA made using Bootstrap_
+_Simple website made using Bootstrap_
 
 ### 〽️ &nbsp; Navbar + Header
 - [X] Hide logo after scroll,
