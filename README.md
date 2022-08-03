@@ -1,7 +1,7 @@
 ## miodzioBusPL 🚍
 
-### Repository: https://github.com/davidsmith931/miodzioBusPL
-### Live Demo: https://davidsmith931.github.io/miodzioBusPL/
+### Repository: https://github.com/RadoslawMikus/miodzioBusPL
+### Live Demo: https://radoslawmikus.github.io/miodzioBusPL/
 
 _Simple website made using Bootstrap_
 
